@@ -76,7 +76,12 @@ class UsersTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        if segue.identifier == "UserDetail" {
+            guard let userDetailVC = segue.destination as? UserDetailViewController else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let user = apiController.users[indexPath.row]
+            userDetailVC.user = user
+        }
     }
 
 
