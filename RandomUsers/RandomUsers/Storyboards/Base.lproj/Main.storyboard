@@ -58,14 +58,75 @@
                     <view key="view" contentMode="scaleToFill" id="O9B-9Z-etU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="MH1-Dn-3vY">
+                                <rect key="frame" x="20" y="108" width="374" height="235"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-Fk-N94">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qf-Ky-5oK">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" ambiguous="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7C-9f-gTA">
+                                                <rect key="frame" x="185" y="0.0" width="41" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-ma-wCo">
+                                        <rect key="frame" x="0.0" y="42.5" width="246" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" text="Phone number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giI-fd-QWf">
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" ambiguous="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C92-83-Yae">
+                                                <rect key="frame" x="184" y="0.0" width="62" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yLK-oe-UWh">
+                                        <rect key="frame" x="0.0" y="85" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="liD-Hx-qbr"/>
+                                            <constraint firstAttribute="width" constant="150" id="zwZ-by-tLr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yLK-oe-UWh" firstAttribute="top" secondItem="MH1-Dn-3vY" secondAttribute="top" constant="85" id="Kv7-8Y-GCA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MH1-Dn-3vY" firstAttribute="top" secondItem="Em5-OV-fGV" secondAttribute="top" constant="20" id="Cwf-a4-2Vp"/>
+                            <constraint firstItem="Em5-OV-fGV" firstAttribute="trailing" secondItem="MH1-Dn-3vY" secondAttribute="trailing" constant="20" id="oac-Kt-LWQ"/>
+                            <constraint firstItem="MH1-Dn-3vY" firstAttribute="leading" secondItem="Em5-OV-fGV" secondAttribute="leading" constant="20" id="wYC-ix-P4q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Em5-OV-fGV"/>
                     </view>
                     <navigationItem key="navigationItem" title="User" id="SBw-tm-q6W"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="I7C-9f-gTA" id="WiS-XQ-TSV"/>
+                        <outlet property="imageView" destination="yLK-oe-UWh" id="D6k-2I-LLl"/>
+                        <outlet property="phoneLabel" destination="C92-83-Yae" id="1HN-VW-pAN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPv-E0-jyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="-2"/>
+            <point key="canvasLocation" x="1547.8260869565217" y="-2.0089285714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HVi-dg-rVQ">

@@ -14,8 +14,17 @@ struct UserResult: Decodable {
 
 struct User: Decodable {
     var name: Name
+    var email: String
+    var phone: String
+    var picture: Picture
 }
 
 struct Name: Decodable {
     var first: String
+    var last: String
+}
+
+struct Picture: Decodable {
+    var thumbnail: URL
+    var large: URL
 }
