@@ -13,5 +13,9 @@ struct UserResult: Decodable {
 }
 
 struct User: Decodable {
-    let name: String
+    var name: Name
+}
+
+struct Name: Decodable {
+    var first: String
 }
